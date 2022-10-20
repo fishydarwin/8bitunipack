@@ -23,3 +23,15 @@ We test the pack for compatibility against **Vanilla Minecraft**.
 This means that you shouldn't require any mods such as OptiFine for special texture handling.
 
 The file size of the pack is also kept minimal to avoid client-side lag, and for faster download times.
+
+## Structure
+
+Custom content (usually models and textures) are included inside their respective folders (for example models go in `assets/minecraft/models`), except in a folder named `custom` (therefore, `assets/minecraft/models/custom`)
+
+Each custom object is placed by this rule:
++ Custom models are simply placed directly (for example `assets/minecraft/models/custom/something.json`)
++ Everything else has a dedicated folder (for example `assets/minecraft/textures/custom/something/texture1.png`)
+
+We explicitly avoid needless categorization as this leads to more trouble in the end.
+
+When some content must replace Vanilla content, it is placed as it would be in the Vanilla default pack, using typical resource pack logic (for example, to replace the `dirt.png` texture, simply add a texture at `assets/minecraft/textures/dirt.png`)
